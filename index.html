@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Token Distributor</title>
+</head>
+<body>
+    <h1>Solana Token Distributor</h1>
+    <button id="connectWallet">Connect Wallet</button>
+    
+    <div id="walletInfo" style="display:none;">
+        <p>Wallet connected: <span id="walletAddress"></span></p>
+        <form id="distributionForm">
+            <label for="tokenAmount">Total Tokens to Distribute:</label>
+            <input type="number" id="tokenAmount" name="tokenAmount" required><br><br>
+
+            <label for="walletCount">Number of Wallets:</label>
+            <input type="number" id="walletCount" name="walletCount" required><br><br>
+
+            <label for="addresses">Wallet Addresses (comma-separated):</label>
+            <input type="text" id="addresses" name="addresses" required><br><br>
+
+            <button type="submit">Distribute Tokens</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/solana-web3.js/1.31.0/solana-web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
